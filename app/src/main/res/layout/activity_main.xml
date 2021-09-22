@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
+    android:background="@drawable/bg_first"
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/containerSongs"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
@@ -17,10 +18,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardHiphop"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
+
 
             >
 
@@ -31,9 +34,9 @@
                 android:paddingBottom="8dp">
 
                 <ImageView
-                    android:scaleType="centerCrop"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/ic_cong" />
 
                 <TextView
@@ -58,6 +61,7 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardHouse"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1">
@@ -69,9 +73,9 @@
                 android:paddingBottom="8dp">
 
                 <ImageView
-                    android:scaleType="centerCrop"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/ic_second_song" />
 
                 <TextView
@@ -106,17 +110,35 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
+            android:id="@+id/btnHiphop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp" />
+            android:backgroundTint="@color/red"
+            android:text="Hip Hop"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCircle"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginHorizontal="24dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:maxLines="1"
+            android:text="circle"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="100dp" />
 
         <Button
+            android:id="@+id/btnHouse"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_gradient_btn"
+            android:text="House"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
